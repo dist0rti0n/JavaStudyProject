@@ -2,27 +2,27 @@ package study.java.model;
 
 import java.time.LocalDateTime;
 
-public class UserMealWithExceed {
+public class MealWithExcess {
     private final LocalDateTime dateTime;
 
     private final String description;
 
     private final int calories;
 
-    private final boolean exceed;
+    private final boolean excess;
 
-    public UserMealWithExceed(LocalDateTime dateTime, String description, int calories, boolean exceed) {
+    public MealWithExcess(LocalDateTime dateTime, String description, int calories, boolean exceed) {
         this.dateTime = dateTime;
         this.description = description;
         this.calories = calories;
-        this.exceed = exceed;
+        this.excess = exceed;
     }
 
-    public UserMealWithExceed(UserMeal userMeal, boolean exceed) {
-        this.dateTime = userMeal.getDateTime();
-        this.description = userMeal.getDescription();
-        this.calories = userMeal.getCalories();
-        this.exceed = exceed;
+    public MealWithExcess(Meal Meal, boolean exceed) {
+        this.dateTime = Meal.getDateTime();
+        this.description = Meal.getDescription();
+        this.calories = Meal.getCalories();
+        this.excess = exceed;
     }
 
     public LocalDateTime getDateTime() {
@@ -37,8 +37,8 @@ public class UserMealWithExceed {
         return calories;
     }
 
-    public boolean isExceed() {
-        return exceed;
+    public boolean isExceeded() {
+        return excess;
     }
 
 }
